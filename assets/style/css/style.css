@@ -1,0 +1,90 @@
+.link-activo {
+  color: red;
+}
+
+.header {
+  grid-area: "header";
+  background-image: url("/assets/img/programacion.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 1;
+  transition: all ease 0.5s;
+  width: auto;
+  height: 100vh;
+}
+.header .header__nav {
+  width: 100%;
+  z-index: 3;
+  position: fixed;
+  background-color: #1a1a1a;
+}
+.header .header__nav nav a i {
+  color: #0084FF;
+  font-size: 2rem;
+}
+.header .header__nav nav a span {
+  font-size: 2.5rem;
+  color: white;
+  font-family: "VT323";
+}
+.header .header__nav nav ul li a {
+  color: white;
+}
+.header .header__profile {
+  margin-top: 8rem;
+  display: grid;
+  grid-template-rows: repeat(1, 1);
+  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.header .header__profile picture img {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 7rem;
+  border: solid 0.3rem white;
+}
+.header .header__profile .header__profile__title {
+  display: flex;
+  flex-direction: column;
+  wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+}
+.header .header__profile .header__profile__title span {
+  font-size: 3rem;
+  color: white;
+  font-family: "VT323";
+}
+.header .header__profile .header__profile__title h1 {
+  font-size: 3.5rem;
+  color: #0084FF;
+  font-family: "DynaPuff", cursive;
+  font-weight: bold;
+}
+
+.main {
+  grid-area: "main";
+}
+
+.footer {
+  grid-area: "footer";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
