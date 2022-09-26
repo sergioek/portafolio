@@ -1,3 +1,77 @@
+$habilidades:(
+ html5:orange,
+ sass:rgb(219, 42, 187),
+ bootstrap:rgb(133, 5, 158),
+ js:rgb(175, 175, 47),
+ php:violet,
+ laravel:rgb(170, 98, 98),
+ square-git:black,
+ github:black,
+);
+
+
 .main{
     grid-area: "main";
+    @include grid(3,auto,1,1fr,0rem);
+    justify-items: center;
+    .main__profile{
+        margin-top: 3rem;
+        @include grid(1,1fr,2,1fr,2rem);
+    
+        #sobre{
+            justify-self: center;
+            width: 80%;
+        }
+
+        #habilidades{
+            justify-self: center;
+            .habilidades__item{
+                margin-top: 3rem;
+                @include grid(3,1fr,3,1fr,5rem);
+                
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    @each $nombre, $color in $habilidades{
+                        .fa-#{$nombre}{
+                            color: $color;
+                            font-size: 3rem;
+                        }
+                    }  
+                }
+                
+                
+            }
+        }
+    }
+
+    .main__working{
+        margin-top: 4rem;
+        width: 80%;
+        #servicios{
+
+            .servicios__item{
+                justify-self: center;
+                @include grid(2,1fr,2,1fr,2rem);
+            }
+        }
+
+
+        #portafolio{
+            .portafolio__item{
+                justify-self: center;
+                @include grid(2,1fr,3,1fr,2rem);
+            }
+        }
+
+
+        #contacto{
+            margin-top: 3rem;
+            .contacto__item{
+                margin-top: 3rem;
+                justify-self: center;
+                @include grid(1,1fr,4,1fr,2rem);
+            }
+        }
+    }
 }

@@ -18,6 +18,8 @@
   z-index: 3;
   position: fixed;
   background-color: #1a1a1a;
+  display: grid;
+  justify-content: start;
 }
 .header .header__nav nav a i {
   color: #0084FF;
@@ -36,6 +38,7 @@
   display: grid;
   grid-template-rows: repeat(1, 1);
   grid-template-columns: repeat(2, 1fr);
+  gap: 0rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -68,10 +71,111 @@
 
 .main {
   grid-area: "main";
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0rem;
+  justify-items: center;
+}
+.main .main__profile {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.main .main__profile #sobre {
+  justify-self: center;
+  width: 80%;
+}
+.main .main__profile #habilidades {
+  justify-self: center;
+}
+.main .main__profile #habilidades .habilidades__item {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+}
+.main .main__profile #habilidades .habilidades__item div {
+  display: flex;
+  flex-direction: column;
+}
+.main .main__profile #habilidades .habilidades__item div .fa-html5 {
+  color: orange;
+  font-size: 3rem;
+}
+.main .main__profile #habilidades .habilidades__item div .fa-sass {
+  color: rgb(219, 42, 187);
+  font-size: 3rem;
+}
+.main .main__profile #habilidades .habilidades__item div .fa-bootstrap {
+  color: rgb(133, 5, 158);
+  font-size: 3rem;
+}
+.main .main__profile #habilidades .habilidades__item div .fa-js {
+  color: rgb(175, 175, 47);
+  font-size: 3rem;
+}
+.main .main__profile #habilidades .habilidades__item div .fa-php {
+  color: violet;
+  font-size: 3rem;
+}
+.main .main__profile #habilidades .habilidades__item div .fa-laravel {
+  color: rgb(170, 98, 98);
+  font-size: 3rem;
+}
+.main .main__profile #habilidades .habilidades__item div .fa-square-git {
+  color: black;
+  font-size: 3rem;
+}
+.main .main__profile #habilidades .habilidades__item div .fa-github {
+  color: black;
+  font-size: 3rem;
+}
+.main .main__working {
+  margin-top: 4rem;
+  width: 80%;
+}
+.main .main__working #servicios .servicios__item {
+  justify-self: center;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.main .main__working #portafolio .portafolio__item {
+  justify-self: center;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.main .main__working #contacto {
+  margin-top: 3rem;
+}
+.main .main__working #contacto .contacto__item {
+  margin-top: 3rem;
+  justify-self: center;
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
 }
 
 .footer {
   grid-area: "footer";
+  display: grid;
+  justify-content: center;
+  background-color: #1a1a1a;
+  width: 100%;
+  height: auto;
+}
+.footer div p {
+  font-size: 1rem;
+  color: white;
+  font-family: "Bree Serif", serif;
 }
 
 * {

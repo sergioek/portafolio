@@ -18,8 +18,9 @@
     gap:$gap;
 }
 
-@mixin grid($row,$height,$columns,$width){
+@mixin grid($row,$height,$columns,$width,$gap){
     display: grid;
     grid-template-rows: repeat($row,$height);
     grid-template-columns: repeat($columns,$width);
+    gap: $gap;
 }

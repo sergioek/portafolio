@@ -12,6 +12,8 @@
         z-index: 3;  
         position: fixed;
         background-color: $black-sure;
+        display: grid;
+        justify-content: start;
         nav{
             a{
                 i{
@@ -42,7 +44,7 @@
 
     .header__profile{
         margin-top: 8rem;
-       @include grid(1,1,2,1fr);
+       @include grid(1,1,2,1fr,0rem);
        display: flex;
        justify-content: center;
        gap: 1rem;
