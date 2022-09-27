@@ -2,6 +2,37 @@
   color: red;
 }
 
+.text h2, .main .main__working #contacto article h2, .main .main__working #portafolio h2, .main .main__working #servicios article h2, .main .main__profile #habilidades article h2, .main .main__profile #sobre article h2 {
+  font-size: 2.8rem;
+  color: #04BB87;
+  font-family: "Lobster", cursive;
+}
+.text h3, .main .main__working #contacto article h3, .main .main__working #portafolio h3, .main .main__working #servicios article h3, .main .main__profile #habilidades article h3, .main .main__profile #sobre article h3 {
+  font-size: 1.8rem;
+  color: #212F3C;
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+}
+.text h5, .main .main__working #contacto article h5, .main .main__working #portafolio h5, .main .main__working #servicios article h5, .main .main__profile #habilidades article h5, .main .main__profile #sobre article h5 {
+  font-size: 1.4rem;
+  color: #212F3C;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+.text p, .main .main__working #contacto article p, .main .main__working #portafolio p, .main .main__working #servicios article p, .main .main__profile #habilidades article p, .main .main__profile #sobre article p {
+  font-size: 1rem;
+  color: #212F3C;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+  line-height: 2.3rem;
+  font-weight: bold;
+}
+.text strong, .main .main__working #contacto article strong, .main .main__working #portafolio strong, .main .main__working #servicios article strong, .main .main__profile #habilidades article strong, .main .main__profile #sobre article strong {
+  font-size: 1.5rem;
+  color: #212F3C;
+  font-family: "Dancing Script", cursive;
+}
+
 .header {
   grid-area: "header";
   background-image: url("/assets/img/programacion.png");
@@ -28,7 +59,7 @@
 .header .header__nav nav a span {
   font-size: 2.5rem;
   color: white;
-  font-family: "VT323";
+  font-family: "VT323", monospace;
 }
 .header .header__nav nav ul li a {
   color: white;
@@ -60,7 +91,7 @@
 .header .header__profile .header__profile__title span {
   font-size: 3rem;
   color: white;
-  font-family: "VT323";
+  font-family: "VT323", monospace;
 }
 .header .header__profile .header__profile__title h1 {
   font-size: 3.5rem;
@@ -88,62 +119,95 @@
   justify-self: center;
   width: 80%;
 }
+.main .main__profile #sobre article a button {
+  background-color: #0084FF;
+  font-size: 1rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  width: 8rem;
+  height: 2.5rem;
+  text-align: center;
+}
 .main .main__profile #habilidades {
   justify-self: center;
 }
-.main .main__profile #habilidades .habilidades__item {
+.main .main__profile #habilidades article .habilidades__item {
   margin-top: 3rem;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
 }
-.main .main__profile #habilidades .habilidades__item div {
+.main .main__profile #habilidades article .habilidades__item div {
   display: flex;
   flex-direction: column;
+  wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
 }
-.main .main__profile #habilidades .habilidades__item div .fa-html5 {
-  color: orange;
+.main .main__profile #habilidades article .habilidades__item div .fa-html5 {
+  color: #f16529;
   font-size: 3rem;
 }
-.main .main__profile #habilidades .habilidades__item div .fa-sass {
-  color: rgb(219, 42, 187);
+.main .main__profile #habilidades article .habilidades__item div .fa-sass {
+  color: #cd6799;
   font-size: 3rem;
 }
-.main .main__profile #habilidades .habilidades__item div .fa-bootstrap {
-  color: rgb(133, 5, 158);
+.main .main__profile #habilidades article .habilidades__item div .fa-bootstrap {
+  color: #7411f6;
   font-size: 3rem;
 }
-.main .main__profile #habilidades .habilidades__item div .fa-js {
-  color: rgb(175, 175, 47);
+.main .main__profile #habilidades article .habilidades__item div .fa-js {
+  color: #f7df1e;
   font-size: 3rem;
 }
-.main .main__profile #habilidades .habilidades__item div .fa-php {
-  color: violet;
+.main .main__profile #habilidades article .habilidades__item div .fa-php {
+  color: #777bb3;
   font-size: 3rem;
 }
-.main .main__profile #habilidades .habilidades__item div .fa-laravel {
-  color: rgb(170, 98, 98);
+.main .main__profile #habilidades article .habilidades__item div .fa-laravel {
+  color: #ef3b2d;
   font-size: 3rem;
 }
-.main .main__profile #habilidades .habilidades__item div .fa-square-git {
-  color: black;
+.main .main__profile #habilidades article .habilidades__item div .fa-git-alt {
+  color: #f05133;
   font-size: 3rem;
 }
-.main .main__profile #habilidades .habilidades__item div .fa-github {
-  color: black;
+.main .main__profile #habilidades article .habilidades__item div .fa-github {
+  color: #1c1f24;
   font-size: 3rem;
 }
 .main .main__working {
   margin-top: 4rem;
   width: 80%;
 }
-.main .main__working #servicios .servicios__item {
+.main .main__working #servicios article .servicios__item {
+  margin-top: 3rem;
   justify-self: center;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+}
+.main .main__working #servicios article .servicios__item div .fa-tablet {
+  color: #f16529;
+  font-size: 2rem;
+}
+.main .main__working #servicios article .servicios__item div .fa-object-group {
+  color: #04BB87;
+  font-size: 2rem;
+}
+.main .main__working #servicios article .servicios__item div .fa-hashtag {
+  color: #7411f6;
+  font-size: 2rem;
+}
+.main .main__working #servicios article .servicios__item div .fa-magnifying-glass-dollar {
+  color: #cd6799;
+  font-size: 2rem;
+}
+.main .main__working #portafolio {
+  margin-top: 3rem;
 }
 .main .main__working #portafolio .portafolio__item {
   justify-self: center;
@@ -152,16 +216,69 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-.main .main__working #contacto {
+.main .main__working #portafolio .portafolio__item .card {
   margin-top: 3rem;
 }
-.main .main__working #contacto .contacto__item {
+.main .main__working #portafolio .portafolio__item .card .card-body {
+  display: flex;
+  flex-direction: column;
+  wrap: nowrap;
+  justify-content: center;
+  align-items: space-evenly;
+  gap: 0rem;
+}
+.main .main__working #portafolio .portafolio__item .card .card-body a {
+  text-decoration: none;
+}
+.main .main__working #portafolio .portafolio__item .card .card-body a i {
+  background-color: #0084FF;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+  font-size: 1rem;
+  color: white;
+}
+.main .main__working #portafolio .portafolio__item .card:hover {
+  border: 0.2rem solid #04BB87;
+}
+.main .main__working #portafolio .portafolio__item .card:hover .card-body:hover i {
+  background-color: #04BB87;
+}
+.main .main__working #contacto {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+.main .main__working #contacto article .contacto__item {
   margin-top: 3rem;
   justify-self: center;
   display: grid;
   grid-template-rows: repeat(1, 1fr);
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+}
+.main .main__working #contacto article .contacto__item div .fa-github {
+  color: #1c1f24;
+  font-size: 4rem;
+}
+.main .main__working #contacto article .contacto__item div .fa-linkedin {
+  color: #0a66c2;
+  font-size: 4rem;
+}
+.main .main__working #contacto article .contacto__item div .fa-envelope {
+  color: #ef3b2d;
+  font-size: 4rem;
+}
+.main .main__working #contacto article .contacto__item div .fa-whatsapp {
+  color: #43c654;
+  font-size: 4rem;
+}
+.main .main__working #contacto article .contacto__item div i:hover {
+  color: #B6B7B7;
 }
 
 .footer {

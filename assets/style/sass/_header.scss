@@ -63,7 +63,7 @@
                 @include text(3rem,$white,$text-pixel);
             }
             h1{
-                @include text(3.5rem,$blue,$title);
+                @include text(3.5rem,$blue,$h1-title);
                 font-weight: bold;
             }
         }
