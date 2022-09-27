@@ -35,7 +35,7 @@
 
 .header {
   grid-area: "header";
-  background-image: url("assetsimgprogramacion.png");
+  background-image: url("../../img/programacion.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
