@@ -9,13 +9,12 @@
     }
 
     h3{
-        @include text(1.8rem,$gray,$h3-title);
-        font-weight: bold;
-        margin-bottom: 2rem;
+        @include text(1.5rem,$gray,$h3-title);
+        margin-bottom: 2.5rem;
     }
 
     h5{
-        @include text(1.4rem,$gray,$p);
+        @include text(1.4rem,$gray,$h5-title);
         font-weight: bold;
     }
 
@@ -27,7 +26,7 @@
     }   
 
     strong{
-        @include text(1.5rem,$gray,$h3-title);
+        @include text(1.5rem,$gray,$strong);
     }
 
 }

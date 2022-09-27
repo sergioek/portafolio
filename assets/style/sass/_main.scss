@@ -107,7 +107,10 @@ $contacto:(
                 .card{
                     .card-body{
                         @include flex(column,nowrap,center,space-evenly,0rem);
-
+                        .card-title{
+                            font-weight: bold;
+                            font-family: $text-cuerpo;
+                        }
                         a{
                             text-decoration: none;
                             i{
@@ -120,7 +123,6 @@ $contacto:(
                         }
                     }
                 } 
-
                 .card:hover{
                     border: 0.2rem solid $green;
                     .card-body:hover{
