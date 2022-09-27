@@ -7,6 +7,9 @@
     opacity:1;
     transition: all ease 0.5s;
     @include size(100%,100vh);
+    display: grid;
+    justify-content: center;
+    align-content: space-around;
     .header__nav{
         width: 100%;
         z-index: 3;  
@@ -43,9 +46,7 @@
     }
 
     .header__profile{
-       @include grid(1,auto,1,1fr,0rem);
-        justify-items:center;
-        margin-top: 12rem;
+       @include grid(1,auto,1,auto,0rem);
         picture{
             img{
                 @include size(14rem,14rem);

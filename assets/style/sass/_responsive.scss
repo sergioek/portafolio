@@ -1,5 +1,27 @@
 @media(max-width:576px){
-
+    .header{
+        .header__profile{
+             picture{
+                 img{
+                     @include size(7rem,7rem);
+                     border-radius:3.5rem;
+                     border: solid 0.3rem $white;
+                 }
+                  
+             }
+     
+             .header__profile__title{
+                 span{
+                     @include text(1.5rem,$white,$text-pixel);
+                 }
+                 h1{
+                     @include text(1.75rem,$blue,$h1-title);
+                     font-weight: bold;
+                     text-align: center;
+                 }
+             }
+         }
+    }
     .main{
         justify-items: center;
         .main__profile{
