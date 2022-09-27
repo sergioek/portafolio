@@ -1,0 +1,73 @@
+@media(max-width:576px){
+    .main{
+        justify-items: center;
+        .main__profile{
+            @include grid(2,1fr,1,1fr,2rem);
+            #sobre{
+                justify-self: center;
+            }
+
+            #habilidades{
+                article{
+                    .habilidades__item{
+                        @include grid(4,1fr,2,1fr,5rem);
+                    }
+                }
+            }
+
+        }
+
+
+        .main__working{
+            #servicios{
+                article{
+                    .servicios__item{
+                        @include grid(auto,1fr,1,1fr,2rem);
+                    }
+                }
+            }
+
+            #portafolio{
+                article{
+                   .portafolio__item{
+                        @include grid(auto,1fr,1,1fr,2rem);
+                    } 
+                }
+                
+            }
+
+            #contacto{
+                article{
+                    .contacto__item{
+                        @include grid(auto,1fr,2,1fr,2rem);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media(min-width:577px) and (max-width:768px){
+   
+
+}
+
+
+@media(min-width:769px) and (max-width:992px){
+   
+
+}
+
+@media(min-width:993px) and (max-width:1200px){
+   
+
+}
+
+
+@media(min-width:1201px) and (max-width:1400px){
+   
+
+}
+

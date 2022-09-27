@@ -12,6 +12,7 @@
   color: #212F3C;
   font-family: "Dancing Script", cursive;
   font-weight: bold;
+  margin-bottom: 2rem;
 }
 .text h5, .main .main__working #contacto article h5, .main .main__working #portafolio h5, .main .main__working #servicios article h5, .main .main__profile #habilidades article h5, .main .main__profile #sobre article h5 {
   font-size: 1.4rem;
@@ -24,7 +25,7 @@
   color: #212F3C;
   font-family: "Open Sans", sans-serif;
   text-align: justify;
-  line-height: 2.3rem;
+  line-height: 4rem;
   font-weight: bold;
 }
 .text strong, .main .main__working #contacto article strong, .main .main__working #portafolio strong, .main .main__working #servicios article strong, .main .main__profile #habilidades article strong, .main .main__profile #sobre article strong {
@@ -41,7 +42,7 @@
   background-attachment: fixed;
   opacity: 1;
   transition: all ease 0.5s;
-  width: auto;
+  width: 100%;
   height: 100vh;
 }
 .header .header__nav {
@@ -65,14 +66,12 @@
   color: white;
 }
 .header .header__profile {
-  margin-top: 8rem;
   display: grid;
   grid-template-rows: repeat(1, 1);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 0rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+  justify-items: center;
+  margin-top: 12rem;
 }
 .header .header__profile picture img {
   width: 14rem;
@@ -98,6 +97,7 @@
   color: #0084FF;
   font-family: "DynaPuff", cursive;
   font-weight: bold;
+  text-align: center;
 }
 
 .main {
@@ -105,8 +105,9 @@
   display: grid;
   grid-template-rows: repeat(3, auto);
   grid-template-columns: repeat(1, 1fr);
-  gap: 0rem;
+  gap: 2rem;
   justify-items: center;
+  width: 100%;
 }
 .main .main__profile {
   margin-top: 3rem;
@@ -128,8 +129,14 @@
   height: 2.5rem;
   text-align: center;
 }
+.main .main__profile #sobre article a button:hover {
+  background-color: transparent;
+  color: #1a1a1a;
+  border: 0.2rem solid #0084FF;
+}
 .main .main__profile #habilidades {
   justify-self: center;
+  width: 80%;
 }
 .main .main__profile #habilidades article .habilidades__item {
   margin-top: 3rem;
@@ -179,16 +186,14 @@
   font-size: 3rem;
 }
 .main .main__working {
-  margin-top: 4rem;
   width: 80%;
 }
 .main .main__working #servicios article .servicios__item {
-  margin-top: 3rem;
   justify-self: center;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 0rem;
 }
 .main .main__working #servicios article .servicios__item div .fa-tablet {
   color: #f16529;
@@ -206,18 +211,12 @@
   color: #cd6799;
   font-size: 2rem;
 }
-.main .main__working #portafolio {
-  margin-top: 3rem;
-}
 .main .main__working #portafolio .portafolio__item {
   justify-self: center;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-}
-.main .main__working #portafolio .portafolio__item .card {
-  margin-top: 3rem;
 }
 .main .main__working #portafolio .portafolio__item .card .card-body {
   display: flex;
@@ -295,6 +294,44 @@
   font-family: "Bree Serif", serif;
 }
 
+@media (max-width: 576px) {
+  .main {
+    justify-items: center;
+  }
+  .main .main__profile {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  .main .main__profile #sobre {
+    justify-self: center;
+  }
+  .main .main__profile #habilidades article .habilidades__item {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+  .main .main__working #servicios article .servicios__item {
+    display: grid;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  .main .main__working #portafolio article .portafolio__item {
+    display: grid;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  .main .main__working #contacto article .contacto__item {
+    display: grid;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;

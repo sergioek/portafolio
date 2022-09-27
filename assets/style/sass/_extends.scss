@@ -11,6 +11,7 @@
     h3{
         @include text(1.8rem,$gray,$h3-title);
         font-weight: bold;
+        margin-bottom: 2rem;
     }
 
     h5{
@@ -21,7 +22,7 @@
     p{
         @include text(1rem,$gray,$p);
         text-align: justify;
-        line-height: 2.3rem;
+        line-height: 4rem;
         font-weight: bold;
     }   
 

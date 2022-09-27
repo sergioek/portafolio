@@ -6,7 +6,7 @@
     background-attachment: fixed;
     opacity:1;
     transition: all ease 0.5s;
-    @include size(auto,100vh);
+    @include size(100%,100vh);
     .header__nav{
         width: 100%;
         z-index: 3;  
@@ -43,11 +43,9 @@
     }
 
     .header__profile{
-        margin-top: 8rem;
-       @include grid(1,1,2,1fr,0rem);
-       display: flex;
-       justify-content: center;
-       gap: 1rem;
+       @include grid(1,1,1,1fr,0rem);
+        justify-items:center;
+        margin-top: 12rem;
         picture{
             img{
                 @include size(14rem,14rem);
@@ -65,6 +63,7 @@
             h1{
                 @include text(3.5rem,$blue,$h1-title);
                 font-weight: bold;
+                text-align: center;
             }
         }
     }
