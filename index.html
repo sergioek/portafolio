@@ -9,26 +9,41 @@
     <link rel="stylesheet" href="./assets/style/bootstrap/bootstrap-5.2.1-dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style/bootstrap/bootstrap-icons-1.9.1/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/3e9a3ccbf4.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Bree+Serif&family=Dancing+Script&family=DynaPuff&family=Lobster&family=Open+Sans:ital,wght@1,300&family=VT323&display=swap" rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="./assets/style/css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Sergio Khairallah | Full Stack Developer</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-light">
+    <header class="header" id="home">
+      <div class="header__nav animate__animated animate__backInUp" id="nav">
+         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <i class="fa-solid fa-terminal">Sk</i>
+              <div>
+                <a class="navbar-brand" href="#" id="logo">
+                  <i class="fa-solid fa-terminal"></i>
+                  <span>SK</span>
                 </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+                <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
               <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
+                <ul class="navbar-nav my-2 my-lg-0" style="--bs-scroll-height: 100px;">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="#home">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#sobre">Sobre</a>
+                    <a class="nav-link" href="#sobre" >Sobre</a>
                   </li>
                   
                   <li class="nav-item">
@@ -45,24 +60,25 @@
                 </ul>
               </div>
             </div>
-          </nav>
+        </nav>
+      </div>
 
-          <div>
-            <picture>
-                <source media="(min-width: 900px)" srcset="./assets/img/imagen-perfil-grande.jpg">
-                <source media="(min-width: 550px)" srcset="./assets/img/imagen-perfil-pequeña.jpg">
-                <img src="./assets/img/imagen-perfil-grande.jpg" width="200px">
-            </picture>
-            <div>
-                <span>Hola!</span>
-                <h1>Soy Sergio Khairallah</h1>
-                <span>Full Stack Developer</span>
-            </div>
-          </div>
+      <div class="header__profile animate__animated animate__backInUp">
+        <picture>
+          <source media="" srcset="./assets/img/imagen-perfil-grande.jpg">
+          <source media="" srcset="./assets/img/imagen-perfil-pequeña.jpg">
+          <img src="./assets/img/imagen-perfil-grande.jpg">
+        </picture>
+        <div class="header__profile__title">
+          <span>Hola!</span>
+          <h1>Soy Sergio Khairallah</h1>
+          <span>Full Stack Developer</span>
+        </div>
+      </div>
     </header>
 
-    <main>
-      <div>
+    <main class="main">
+      <div class="main__profile">
         <section id="sobre">
           <article>
             <h2>Sobre mí</h2>
@@ -70,19 +86,17 @@
             <p>Soy un desarrollador Full Stack con experiencia en la creación de sitios web y aplicaciones web.  Me especializo en PHP y tengo experiencia profesional trabajando con Laravel.
               Siempre busco mejorar mis habilidades y seguir creciendo profesionalmente. Mi perfil docente me hace apto para enseñar aquellas tecnologías que aprendo en mi labor de programador.</p>
               <a href="">
-                <button>Descargar CV</button>
+                <button class="fa-solid fa-cloud-arrow-down"> Descargar CV</button>
               </a>
           </article>
-
-          
         </section>
   
-        <section>
+        <section id="habilidades">
           <article>
             <div></div>
-            <h3>Mis habilidades</h3>
+            <h2>Mis habilidades</h2>
             
-            <div>
+            <div class="habilidades__item">
               <div>
                 <i class="fa-brands fa-html5"></i>
                 <strong>HTML</strong>
@@ -114,7 +128,7 @@
               </div>
 
               <div>
-                <i class="fa-brands fa-square-git"></i>                
+                <i class="fa-brands fa-git-alt"></i>
                 <strong>Git</strong>
               </div>
 
@@ -129,36 +143,39 @@
       </div>
       
 
-      <div>
+      <div class="main__working">
         <section id="servicios">
           <article>
             <h2>Servicios</h2>
             <h3>Servicios que ofrezco a mis clientes</h3>
 
-            <div>
-              <i class="fa-solid fa-tablet"></i>
-              <strong>Totalmente responsivo</strong>
-              <p>Su sitio web se visualizará en cualquier dispositivo como PC, tablets y teléfonos móviles.</p>
+            <div class="servicios__item">
+              <div>
+                <i class="fa-solid fa-tablet"></i>
+                <strong>Totalmente responsivo</strong>
+                <p>Su sitio web se visualizará en cualquier dispositivo como PC, tablets y teléfonos móviles.</p>
+              </div>
+  
+              <div>
+                <i class="fa-solid fa-object-group"></i>
+                <strong>Diseño creativo</strong>
+                <p>Elegantes y modernos diseños para potenciar la imagen de su negocio.</p>
+              </div>
+  
+              <div>
+                <i class="fa-solid fa-hashtag"></i>
+                <strong>Integración con redes sociales</strong>
+                <p>Existen muchas plataformas sociales, y debe promocionar su presencia en ellas en su sitio web.</p>
+              </div>
+  
+              <div>
+                <i class="fa-solid fa-magnifying-glass-dollar"></i>
+                <strong>SEO</strong>
+                <p>Optimizaré su sitio con una estrategia inteligente de optimización de motores de búsqueda para generar clientes potenciales.</p>
+              </div>
+  
             </div>
-
-            <div>
-              <i class="fa-solid fa-object-group"></i>
-              <strong>Diseño creativo</strong>
-              <p>Elegantes y modernos diseños para potenciar la imagen de su negocio.</p>
-            </div>
-
-            <div>
-              <i class="fa-solid fa-hashtag"></i>
-              <strong>Integración con redes sociales</strong>
-              <p>Existen muchas plataformas sociales, y debe promocionar su presencia en ellas en su sitio web.</p>
-            </div>
-
-            <div>
-              <i class="fa-solid fa-magnifying-glass-dollar"></i>
-              <strong>SEO</strong>
-              <p>Optimizaré su sitio con una estrategia inteligente de optimización de motores de búsqueda para generar clientes potenciales.</p>
-            </div>
-
+            
           </article>
         </section>
 
@@ -168,14 +185,14 @@
             <h2>Portafolio</h2>
             <h3>En esta sección puedes ver los proyectos que realicé.</h3>
 
-            <div>
+            <div class="portafolio__item">
 
               <div class="card" style="width: 18rem;">
                 <img src="./assets/img/municipalidad.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Sistema de expedientes</h5>
                   <p class="card-text">Sistema de expedientes para la Municipalidad de Fernández.</p>
-                  <a href="https://github.com/sergioek/SISTEMA-EXPEDIENTES" class="btn btn-primary" target="_blank">
+                  <a href="https://github.com/sergioek/SISTEMA-EXPEDIENTES"  target="_blank">
                     <i class="fa-solid fa-eye"> Visitar</i>
                   </a>
                 </div>
@@ -186,7 +203,7 @@
                 <div class="card-body">
                   <h5 class="card-title">StarkMan</h5>
                   <p class="card-text">Sistema de gestión para local de ventas de ropa masculina.</p>
-                  <a href="https://github.com/sergioek/minegocio" class="btn btn-primary" target="_blank">
+                  <a href="https://github.com/sergioek/minegocio" target="_blank">
                     <i class="fa-solid fa-eye"> Visitar</i>
                   </a>
                 </div>
@@ -197,7 +214,7 @@
                 <div class="card-body">
                   <h5 class="card-title">SIGA</h5>
                   <p class="card-text">Sistema integral de gestión de alumnos para Escuela Técnica Nº12 de la ciudad de Fernández, provincia de Santiago del Estero.</p>
-                  <a href="https://github.com/sergioek/SIGA" class="btn btn-primary" target="_blank">
+                  <a href="https://github.com/sergioek/SIGA"  target="_blank">
                     <i class="fa-solid fa-eye"> Visitar</i>
                   </a>
                 </div>
@@ -208,7 +225,7 @@
                 <div class="card-body">
                   <h5 class="card-title">TiendaCami</h5>
                   <p class="card-text">Proyecto Frontend para tienda de ventas de artículos de bazar.</p>
-                  <a href="https://sergioek.github.io/TiendaCami/" class="btn btn-primary" target="_blank">
+                  <a href="https://sergioek.github.io/TiendaCami/" target="_blank">
                     <i class="fa-solid fa-eye"> Visitar</i>
                   </a>
                 </div>
@@ -219,7 +236,7 @@
                 <div class="card-body">
                   <h5 class="card-title">UrsulaApp</h5>
                   <p class="card-text">Aplicación android para combatir la violencia de género.</p>
-                  <a href="https://play.google.com/store/apps/details?id=io.kodular.khairallahsergio4.UrsulaAplication&hl=es_AR&gl=US" class="btn btn-primary" target="_blank">
+                  <a href="https://play.google.com/store/apps/details?id=io.kodular.khairallahsergio4.UrsulaAplication&hl=es_AR&gl=US" target="_blank">
                     <i class="fa-solid fa-eye"> Visitar</i>
                   </a>
                 </div>
@@ -233,29 +250,35 @@
         <section id="contacto">
           <article>
             <h2>Contacto</h2>
-            <div>
-              <a href="https://github.com/sergioek" target="_blank">
-                 <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
 
-            <div>
-              <a href="https://www.linkedin.com/in/sergio-khairallah-b5b856b6" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-            </div>
+            <div class="contacto__item">
 
-            <div>
-              <a href="mailto:khairallahsergio4@gmail.com">
-                <i class="fa-solid fa-envelope"></i>
-              </a>
+              <div>
+                <a href="https://github.com/sergioek" target="_blank">
+                   <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+  
+              <div>
+                <a href="https://www.linkedin.com/in/sergio-khairallah-b5b856b6" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </div>
+  
+              <div>
+                <a href="mailto:khairallahsergio4@gmail.com">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </div>
+  
+              <div>
+                <a href="https://wa.me/543855307491" target="_blank">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+  
             </div>
-
-            <div>
-              <a href="https://wa.me/543855307491" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>
-              </a>
-            </div>
+            
           </article>
         </section>
 
@@ -263,7 +286,7 @@
 
     </main>
 
-    <footer>
+    <footer class="footer">
       <div>
         <p>Copyright © 2022. Sergio Khairallah
           All Rights Reserved</p>
@@ -271,5 +294,9 @@
     </footer>
     
       <script src="./assets/style/bootstrap/bootstrap-5.2.1-dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+      <script src="./assets/js/main.js"></script>
 </body>
 </html>

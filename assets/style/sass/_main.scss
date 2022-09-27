@@ -1,0 +1,165 @@
+$habilidades:(
+ html5:#f16529,
+ sass:#cd6799,
+ bootstrap:#7411f6,
+ js:#f7df1e,
+ php:#777bb3,
+ laravel:#ef3b2d,
+ git-alt:#f05133,
+ github:#1c1f24,
+);
+
+$servicios:(
+    tablet:#f16529,
+    object-group:$green,
+    hashtag:#7411f6,
+    magnifying-glass-dollar:#cd6799,
+);
+
+$contacto:(
+    github:#1c1f24,
+    linkedin:#0a66c2,
+    envelope:#ef3b2d,
+    whatsapp:#43c654,
+);
+
+.main{
+    grid-area: "main";
+    @include grid(3,auto,1,1fr,0rem);
+    justify-items: center;
+    .main__profile{
+        margin-top: 3rem;
+        @include grid(1,1fr,2,1fr,2rem);
+    
+        #sobre{
+            justify-self: center;
+            width: 80%;
+            article{
+                @extend .text;
+               a{
+                    button{
+                        background-color: $blue;
+                        @include text(1rem,$white,$p);
+                        @include size(8rem,2.5rem);
+                        text-align: center;
+                    }
+               }
+               
+            }
+        }
+
+        #habilidades{
+            justify-self: center;
+            article{
+                @extend .text;
+                .habilidades__item{
+                    margin-top: 3rem;
+                    @include grid(3,1fr,3,1fr,5rem);
+                    
+                    div{
+                        @include flex(column,nowrap,center,center,0rem);
+                        @each $nombre, $color in $habilidades{
+                            .fa-#{$nombre}{
+                                color: $color;
+                                font-size: 3rem;
+                            }
+                        }  
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .main__working{
+        margin-top: 4rem;
+        width: 80%;
+        #servicios{
+            article{
+                @extend .text;
+                .servicios__item{
+                    margin-top: 3rem;
+                    justify-self: center;
+                    @include grid(2,1fr,2,1fr,2rem);
+                    div{
+                        @each $nombre,$color in $servicios {
+                            .fa-#{$nombre}{
+                                color:$color;
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+
+        #portafolio{
+            margin-top: 3rem;
+            @extend .text;
+            .portafolio__item{
+                justify-self: center;
+                @include grid(2,1fr,3,1fr,2rem);
+                .card{
+                    margin-top: 3rem;
+                    .card-body{
+                        @include flex(column,nowrap,center,space-evenly,0rem);
+
+                        a{
+                            text-decoration: none;
+                            i{
+                                background-color: $blue;
+                                @include size(100%,3rem);
+                                @include flex(row,nowrap,center,center,0rem);
+                                font-size: 1rem;
+                                color: $white;
+                            } 
+                        }
+                    }
+                } 
+
+                .card:hover{
+                    border: 0.2rem solid $green;
+                    .card-body:hover{
+                        i{
+                             background-color:$green;
+
+                        } 
+                    }
+                }
+            }
+        }
+
+
+        #contacto{
+            margin-top: 3rem;
+            margin-bottom: 5rem;
+            article{
+                @extend .text;
+                .contacto__item{
+                    margin-top: 3rem;
+                    justify-self: center;
+                    @include grid(1,1fr,4,1fr,2rem);
+
+                    div{
+                        @each $item, $color in $contacto {
+                        .fa-#{$item}{
+                            color:$color;
+                            font-size: 4rem;
+                            }
+                        }  
+
+                        i:hover{
+                            color: #B6B7B7;
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+
+
+    }
+}

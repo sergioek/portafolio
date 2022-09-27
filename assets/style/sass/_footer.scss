@@ -1,0 +1,12 @@
+.footer{
+    grid-area: "footer";
+    display: grid;
+    justify-content: center;
+    background-color: $black-sure;
+    @include size(100%,auto);
+    div{
+        p{
+            @include text(1rem,$white,$text-cuerpo);
+        }
+    }
+}

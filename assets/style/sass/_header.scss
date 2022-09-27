@@ -1,0 +1,73 @@
+.header{
+    grid-area: "header";
+    background-image: url("/assets/img/programacion.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity:1;
+    transition: all ease 0.5s;
+    @include size(auto,100vh);
+    .header__nav{
+        width: 100%;
+        z-index: 3;  
+        position: fixed;
+        background-color: $black-sure;
+        display: grid;
+        justify-content: start;
+        nav{
+            a{
+                i{
+                    color: $blue;
+                    font-size: 2rem;  
+                }
+                span{
+                    @include text(2.5rem,$white,$text-pixel);
+                    
+                }
+
+               
+            }
+
+            
+            ul{
+                li{
+                    a{
+                        color:$white;
+                    }
+
+
+                }
+
+            }
+        }
+    }
+
+    .header__profile{
+        margin-top: 8rem;
+       @include grid(1,1,2,1fr,0rem);
+       display: flex;
+       justify-content: center;
+       gap: 1rem;
+        picture{
+            img{
+                @include size(14rem,14rem);
+                border-radius:7rem;
+                border: solid 0.3rem $white;
+            }
+             
+        }
+
+        .header__profile__title{
+            @include flex(column,wrap,center,center,0rem);
+            span{
+                @include text(3rem,$white,$text-pixel);
+            }
+            h1{
+                @include text(3.5rem,$blue,$h1-title);
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+
