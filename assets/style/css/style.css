@@ -35,7 +35,7 @@
 
 .header {
   grid-area: "header";
-  background-image: url("/assets/img/programacion.png");
+  background-image: url("https://definicion.de/wp-content/uploads/2009/04/programacion.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
