@@ -30,7 +30,7 @@ $contacto:(
     width: 100%;
     .main__profile{
         margin-top: 3rem;
-        @include grid(1,1fr,2,1fr,2rem);
+        @include grid(1,auto,2,1fr,2rem);
         #sobre{
             justify-self: center;
             width: 80%;
@@ -61,7 +61,7 @@ $contacto:(
                 @extend .text;
                 .habilidades__item{
                     margin-top: 3rem;
-                    @include grid(3,1fr,3,1fr,5rem);
+                    @include grid(3,auto,3,1fr,5rem);
                     div{
                         @include flex(column,nowrap,center,center,0rem);
                         @each $nombre, $color in $habilidades{
@@ -84,7 +84,7 @@ $contacto:(
                 @extend .text;
                 .servicios__item{
                     justify-self: center;
-                    @include grid(2,1fr,2,1fr,0rem);
+                    @include grid(2,auto,2,1fr,2rem);
                     div{
                         @each $nombre,$color in $servicios {
                             .fa-#{$nombre}{
@@ -103,7 +103,7 @@ $contacto:(
             @extend .text;
             .portafolio__item{
                 justify-self: center;
-                @include grid(2,1fr,3,1fr,2rem);
+                @include grid(2,auto,3,1fr,2rem);
                 .card{
                     .card-body{
                         @include flex(column,nowrap,center,space-evenly,0rem);
@@ -142,7 +142,7 @@ $contacto:(
                 .contacto__item{
                     margin-top: 3rem;
                     justify-self: center;
-                    @include grid(1,1fr,4,1fr,2rem);
+                    @include grid(1,auto,4,1fr,2rem);
 
                     div{
                         @each $item, $color in $contacto {

@@ -1,8 +1,9 @@
 @media(max-width:576px){
+
     .main{
         justify-items: center;
         .main__profile{
-            @include grid(2,1fr,1,1fr,2rem);
+            @include grid(2,auto,1,1fr,2rem);
             #sobre{
                 justify-self: center;
             }
@@ -10,7 +11,7 @@
             #habilidades{
                 article{
                     .habilidades__item{
-                        @include grid(4,1fr,2,1fr,5rem);
+                        @include grid(4,auto,2,1fr,5rem);
                     }
                 }
             }
